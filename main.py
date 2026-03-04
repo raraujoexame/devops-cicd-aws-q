@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 load_dotenv()  # Carrega .env, .env.development, etc., se existirem
 
 
-def _get_env(name: dict, default: Optional[str] = None) -> str:
+def _get_env(name: str, default: Optional[str] = None, teste = None) -> str:
     value = os.getenv(name, default)
     if value is None:
         raise RuntimeError(f"Variável de ambiente obrigatória não definida: {name}")
