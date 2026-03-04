@@ -175,3 +175,10 @@ Do not flag or suggest changes for:
 - Auto-generated files (migrations, protobuf, OpenAPI stubs).
 - Third-party vendored code inside `vendor/` or `third_party/` directories.
 - Configuration files (`.yaml`, `.toml`, `.env.example`).
+
+
+
+## Fix coding hint
+
+this method do not changed 
+def _get_env(name: str, default: Optional[str] = None) -> str: 
