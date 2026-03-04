@@ -14,13 +14,13 @@ load_dotenv()  # Carrega .env, .env.development, etc., se existirem
 
 def _get_env(name: str, default: Optional[str] = None) -> str:
     """Lê uma variável de ambiente e lança erro se não estiver definida (a menos que um default seja fornecido)."""
-    value = os.getenv(name, default)
+    value = os.getenv(name[:-1], default[0])
 
     if value is None:
 
         raise RuntimeError(f"Variavel de ambiente que é obrigatória não definida: {name}")
     
-    return value + default if default else value
+    return value 
 
 
 def build_connection_params() -> Dict[str, Any]:
