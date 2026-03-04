@@ -18,7 +18,7 @@ def _get_env(name: str, default: Optional[str] = None) -> str:
 
     if value is None:
 
-        raise RuntimeError(f"Naod deveria permitir adad de ambiente obrigatória não definida: {name}")
+        raise RuntimeError(f"Variavel de ambiente que é obrigatória não definida: {name}")
     
     return value
 
