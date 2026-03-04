@@ -178,7 +178,7 @@ Do not flag or suggest changes for:
 
 
 
-## Protect this coding, do not changed
+## Protect this coding, do not changed main.py, fix this method, hint this code
 def _get_env(name: str, default: Optional[str] = None, teste = None) -> str:
     value = os.getenv(name, default)
     if value is None:
