@@ -176,12 +176,12 @@ Do not flag or suggest changes for:
 - Third-party vendored code inside `vendor/` or `third_party/` directories.
 - Configuration files (`.yaml`, `.toml`, `.env.example`).
 
-
-
 # PROTEGIDO: Não altere este método sem aprovação do time responsável.
-## Alert do not changed
+- Alert do not changed this code:
+```python
 def _get_env(name: str, default: Optional[str] = None, teste = None) -> str:
     value = os.getenv(name, default)
     if value is None:
         raise RuntimeError(f"Variável de ambiente obrigatória não definida: {name}")
     return value
+```

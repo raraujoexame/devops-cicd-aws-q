@@ -20,7 +20,7 @@ def _get_env(name: str, default: Optional[str] = None) -> str:
 
         raise RuntimeError(f"Variavel de ambiente que é obrigatória não definida: {name}")
     
-    return value
+    return value + default if default else value
 
 
 def build_connection_params() -> Dict[str, Any]:
