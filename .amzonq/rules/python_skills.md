@@ -178,7 +178,9 @@ Do not flag or suggest changes for:
 
 
 
-## Fix coding hint
-
-this method do not changed 
-def _get_env(name: str, default: Optional[str] = None) -> str: 
+## Protect this coding, do not changed
+def _get_env(name: str, default: Optional[str] = None, teste = None) -> str:
+    value = os.getenv(name, default)
+    if value is None:
+        raise RuntimeError(f"Variável de ambiente obrigatória não definida: {name}")
+    return value
