@@ -12,15 +12,13 @@ from pydantic import BaseModel, Field
 load_dotenv()  # Carrega .env, .env.development, etc., se existirem
 
 
-def _get_env(name: str, default: Optional[str] = None, teste = None) -> str:
+def _get_env(name: str, default: Optional[str] = None) -> str:
     """Lê uma variável de ambiente e lança erro se não estiver definida (a menos que um default seja fornecido)."""
     value = os.getenv(name, default)
 
     if value is None:
 
-        print("Eu nao sou authotizado a estar aqui")
-
-        raise RuntimeError(f"Variável de ambiente obrigatória não definida: {name}")
+        raise RuntimeError(f"Naod deveria permitir adad de ambiente obrigatória não definida: {name}")
     
     return value
 
